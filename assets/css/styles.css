@@ -1,0 +1,260 @@
+:root {
+  /* font-size: 62.5%; */
+  --black: #000;
+  --gray: #333;
+  --white: #fff;
+  --cyan: rgba(11, 163, 156, 0.9);
+}
+
+.poller-one-regular {
+  font-family: "Poller One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+h1,
+h2,
+span {
+  font-family: "Poller One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  color: var(--cyan) !important;
+}
+
+.hero {
+  height: 700px;
+  background: url("../img/the-beacon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1;
+}
+
+#hero-text {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+#hero-text h1 {
+  font-size: 1.2rem;
+  width: fit-content;
+}
+
+#hero-text p {
+  color: var(--white);
+  background-color: var(--gray);
+  width: 27.5rem;
+}
+
+#hero-text button {
+  background-color: var(--cyan);
+  color: var(--white);
+  border: none;
+}
+
+.chars img {
+  opacity: 0.7;
+}
+
+.chars img:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.chars h2 {
+  font-size: 1.2rem;
+}
+
+footer {
+  padding: 30px 250px;
+}
+
+footer i {
+  border: 2px solid var(--white);
+  padding: 10px 12px;
+  color: var(--cyan);
+}
+
+.gallery-single-title {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#gallery-single-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#gallery-single-container:hover {
+  h4 {
+    color: var(--cyan) !important;
+  }
+
+  button {
+    background-color: var(--cyan);
+    color: var(--black);
+  }
+  box-shadow: 6px 6px 0 var(--cyan);
+}
+
+#gallery-single-photo {
+  height: 440px;
+  background: url("../img/mustache1.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btn-outline-gray {
+  color: var(--gray);
+  border: 2px solid var(--gray);
+  background-color: var(--white);
+  margin: 10px 0;
+}
+
+:placeholder-shown {
+  border: 2px solid var(--gray);
+  text-align: center;
+  color: var(--gray);
+}
+
+::placeholder {
+  text-transform: uppercase;
+}
+
+textarea {
+  resize: none;
+  height: 150px !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#gallery-parent-container {
+  width: 90%; /* Limit the width of the gallery */
+  margin: 0 auto; /* Center the gallery */
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* Center the images horizontally */
+}
+
+.gallery-container a {
+  display: block;
+  width: calc(25% - 6.666px); /* Three images per row by default */
+}
+
+.gallery-container img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below the image */
+}
+
+@media (max-width: 991px) {
+  .hero {
+    width: 100%;
+    height: 400px;
+  }
+  .chars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .chars img {
+    width: 470px;
+  }
+
+  .chars h2 {
+    font-size: 3;
+  }
+
+  .navbar-toggler {
+    margin: 0 auto;
+  }
+
+  #navbar ul {
+    display: block !important;
+    margin: 20px;
+    width: 80vw;
+    gap: 10px;
+  }
+
+  #navbar .nav-item {
+    background-color: var(--black);
+    /* color: var(--white) !important; */
+    padding: 5px;
+    width: 100%;
+    margin: 5px;
+  }
+
+  #navbar .nav-link {
+    color: var(--white) !important;
+  }
+
+  #navbar .nav-link.active {
+    color: var(--cyan) !important;
+  }
+
+  #hero-text {
+    position: absolute;
+    left: 50% !important;
+  }
+
+  #hero-text h1,
+  #hero-text p {
+    width: 60vw !important;
+  }
+
+  .gallery-container {
+    justify-content: space-between !important;
+  }
+
+  .gallery-container a {
+    width: calc(33% - 5px) !important;
+  }
+
+  footer {
+    padding: 30px 100px;
+  }
+
+  footer > div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .gallery-container a {
+      width: 100% !important;
+    }
+
+    .gallery-container img {
+      width: 50% !important;
+      margin: 0 auto;
+    }
+  }
+}
