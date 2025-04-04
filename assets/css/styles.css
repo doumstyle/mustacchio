@@ -29,7 +29,7 @@ span {
   color: black;
 }
 
-.active {
+.nav-link.active {
   color: var(--cyan) !important;
 }
 

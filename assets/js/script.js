@@ -1,11 +1,23 @@
 // Check that url and href values match to style the link of the current page
 document.querySelectorAll(".nav-link").forEach((link) => {
+  // Get the href attribute of the link
+  const href = link.getAttribute("href");
+
+  // Get the current pathname
+  const pathname = window.location.pathname;
+
+  // Check if the href matches the pathname or if it's the index page
   if (
-    link.getAttribute("href") === window.location.pathname ||
-    (window.location.pathname === "/" &&
-      link.getAttribute("href") === "/index.html")
+    href === pathname ||
+    (pathname === "/" && href === "/index.html") ||
+    (pathname !== "/" &&
+      pathname.includes(href) &&
+      href !== "/index.html" &&
+      href !== "/")
   ) {
     link.classList.add("active");
+  } else {
+    link.classList.remove("active"); // Ensure other links are not active
   }
 });
 
